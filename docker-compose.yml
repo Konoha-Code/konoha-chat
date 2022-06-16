@@ -1,0 +1,28 @@
+version: '3'
+services:
+  database:
+    image: postgres
+    env_file:
+      - database/.env
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "5432:5432"
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+  api:
+    image: python
+    volumes:
+      - ./api:/home/api
+    entrypoint: /home/api/entrypoint.sh
+    working_dir: /home/api
+    env_file:
+      - api/.env
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "8080:8080"
+volumes:
+  database:
+    driver: local
