@@ -1,5 +1,7 @@
 # konoha-chat
 
+![image](https://img.shields.io/badge/N%C3%ADvel-M%C3%A9dio-yellow)
+
 Chat de conversa entre diversas linguagens de programação, com propósito educacional. Não se preocupa com nenhum tipo de autenticação ou segurança, apenas com o envio de mensagens.
 
 ## Tabela de conteúdos
