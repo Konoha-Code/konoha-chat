@@ -1,8 +1,8 @@
 package server
 
 import (
-	"konoha-chat/server/routes"
 	"log"
+	"sysmo/api-go/server/routes"
 
 	"github.com/gin-gonic/gin"
 	cors "github.com/rs/cors/wrapper/gin"
@@ -14,12 +14,12 @@ type Server struct {
 }
 
 func NewServer() Server {
-	customServer := gin.Default()
-	customServer.Use(cors.Default())
+	s := gin.Default()
+	s.Use(cors.Default())
 
 	return Server{
 		port:   "5000",
-		server: customServer,
+		server: s,
 	}
 }
 
