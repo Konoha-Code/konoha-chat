@@ -1,8 +1,8 @@
 package server
 
 import (
+	"konoha/api-go/server/routes"
 	"log"
-	"sysmo/api-go/server/routes"
 
 	"github.com/gin-gonic/gin"
 	cors "github.com/rs/cors/wrapper/gin"

@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"fmt"
+	"konoha/api-go/database"
+	"konoha/api-go/models"
 	"net/http"
-	"sysmo/api-go/database"
-	"sysmo/api-go/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

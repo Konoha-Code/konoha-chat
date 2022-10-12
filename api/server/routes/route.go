@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"sysmo/api-go/controllers"
+	"konoha/api-go/controllers"
 
 	"github.com/gin-gonic/gin"
 )

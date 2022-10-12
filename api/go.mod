@@ -1,4 +1,4 @@
-module sysmo/api-go
+module konoha/api-go
 
 go 1.17
 
