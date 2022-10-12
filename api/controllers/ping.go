@@ -1,11 +1,7 @@
 package controllers
 
-import (
-	"net/http"
+import "github.com/gin-gonic/gin"
 
-	"github.com/gin-gonic/gin"
-)
-
-func Ping(ctx *gin.Context) {
-	ctx.String(http.StatusOK, "Chat Online")
+func GetPing(ctx *gin.Context) {
+	ctx.JSON(200, "Chat Online")
 }
