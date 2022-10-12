@@ -18,6 +18,11 @@ func CreateUser(ctx *gin.Context) {
 		return
 	}
 
+	if getUser("name", name).ID != "" {
+		ctx.JSON(http.StatusBadRequest, fmt.Sprintf("Usuário [%s] já cadastrado, favor informar um nome diferente", name))
+		return
+	}
+
 	id := uuid.New().String()
 
 	database.GetDatabase().Create(&models.User{ID: id, Name: name})
